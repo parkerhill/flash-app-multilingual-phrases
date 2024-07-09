@@ -6,8 +6,9 @@ The Multilingual Phrase Flashcard App is a desktop application designed to help 
 #### Features
 - **Multiple Languages:** Supports French, German, Spanish, and Mexican Spanish.
 - **Text-to-Speech:** Pronounces phrases using appropriate voices for each language.
+- **User Progress:** Customizable flashcard decks that adapt to user progress.
 - **Interactive Flashcards:** Users can flip flashcards to see translations and hear pronunciations.
-- **Category Selection:** Users can choose from various categories like general, travel, restaurant, dating, and work.
+- **Category Selection:** Users can choose from general, travel, restaurant, dating, and work categories.
 - **Learning Direction:** Option to practice translating to English or from English.
 - **Language Learning Tips:** Provides useful tips for effective language learning.
 
@@ -23,6 +24,11 @@ The Multilingual Phrase Flashcard App is a desktop application designed to help 
 - **Control Buttons:** Includes buttons for flipping cards, changing languages, and categories.
 - **Tips Button:** Access language learning tips.
 
+  #### System Requirements
+    **Python 3.7+
+    **Windows OS (for text-to-speech functionality)
+    **Required Python libraries: tkinter, pandas, win32com.client
+
 ### GitHub Repository Instructions
 
 #### Repository Overview
@@ -32,13 +38,30 @@ This repository contains the source code and data files for the Multilingual Phr
 - **main.py:** The main script to run the application.
 - **data/:** Directory containing CSV files for different languages and categories.
 - **images/:** Directory containing image files used in the application.
-- **requirements.txt:** Lists the dependencies required to run the application.
+- **requirements.txt:** Expanded requirements list the dependencies required to run the application.
 
+#### Voice Setup
+  **The app uses Windows SAPI voices for text-to-speech functionality. To set up voices properly:
+  **Go to Windows Settings > Time & Language > Speech
+  **Under "Manage voices", install the voices for the languages you want to use
+  **The app will automatically detect and use the appropriate voices based on their names:
+
+  **English: Microsoft Zira
+  **German: Microsoft Hedda
+  **French: Microsoft Hortense
+  **Mexican Spanish: Microsoft Sabina
+  **Spanish (Spain): Microsoft Helena
+
+If you have different voice names, you may need to modify the setup_voices() function in the code.
+
+
+CSV Files
+The app uses CSV files to store phrases. Each language and category combination should have its own CSV file named as follows:
 #### Setup Instructions
 1. **Clone the Repository:**
    ```sh
-   git clone https://github.com/your-username/flash-card-app.git
-   cd flash-card-app
+   git clone https://github.com/parkerhill/flash-app-multilingual-phrases.git
+   cd flash-app-multilingual-phrases
    ```
 
 2. **Install Dependencies:**
@@ -65,4 +88,4 @@ This repository contains the source code and data files for the Multilingual Phr
 - **Voice Configuration:** Ensure that the text-to-speech voices are correctly configured on your system.
 - **Data Files:** Verify that the CSV files are correctly formatted and located in the `data` directory.
 
-By following these instructions, you and your fellow students can easily set up and run the Multilingual Phrase Flashcard App. Enjoy practicing and enhancing your language skills!
+Following these instructions, you can easily set up and run the Multilingual Phrase Flashcard App. Enjoy practicing and enhancing your language skills!
